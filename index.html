@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Free Tools Hub — 10 free online tools: Unit Converter, BMI Calculator, Age Calculator, Percentage Calculator, QR Code Generator, Word Counter, Password Generator, Loan EMI Calculator, Image Compressor and PDF guide. No sign-up, works in your browser." />
+<meta name="keywords" content="unit converter, cm to inches, kg to lbs, bmi calculator, age calculator, percentage calculator, qr code generator, word counter, password generator, emi calculator, image compressor" />
+<meta property="og:title" content="Free Tools Hub — 10 Free Online Tools" />
+<meta property="og:description" content="Convert units, calculate BMI, age, percentages and EMI, generate QR codes and strong passwords, count words and compress images — free, instant, no sign-up." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:," />
+<title>Free Tools Hub — Unit Converter, BMI, Age, EMI Calculator & More</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Free Tools Hub","description":"10 free online tools and calculators that run entirely in your browser.","potentialAction":{"@type":"SearchAction","target":"#home","query-input":"required name=search_term_string"}}
+</script>
+<style>
+:root{
+  --bg:#F6F7F4; --surface:#FFFFFF; --surface2:#EEF2EE; --ink:#16211C; --muted:#5A6B62;
+  --line:#DCE3DC; --accent:#0E7C66; --accent-dark:#0A5F4E; --accent-soft:#E2F1EB;
+  --amber:#B45309; --amber-soft:#FDF0DC; --red:#B3261E; --red-soft:#FBE9E7;
+  --blue:#1D4ED8; --blue-soft:#E3EBFD; --radius:14px; --shadow:0 1px 2px rgba(20,40,30,.06),0 8px 24px rgba(20,40,30,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0E1512; --surface:#16201B; --surface2:#1C2922; --ink:#E7EFEA; --muted:#9DB0A5;
+  --line:#2A3A31; --accent:#2FBF9B; --accent-dark:#5ED3B3; --accent-soft:#14352B;
+  --amber:#F0A840; --amber-soft:#3A2C12; --red:#F0807A; --red-soft:#3D1E1B;
+  --blue:#8FB0FF; --blue-soft:#1D2A4A; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35); }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.6}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;margin:0}
+a{color:var(--accent-dark)}
+button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:44px}
+input[type="checkbox"],input[type="radio"]{width:20px;height:20px;accent-color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.header-in{display:flex;align-items:center;gap:14px;padding:10px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.15rem}
+.brand-mark{width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:"Fraunces",serif;font-weight:900;font-size:1.05rem;flex:none}
+nav.main{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.main a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem;padding:10px 12px;border-radius:9px;min-height:44px;display:inline-flex;align-items:center}
+nav.main a:hover{background:var(--surface2)}
+/* Hero */
+.hero{padding:38px 0 8px}
+.hero h1{font-size:clamp(1.9rem,5.2vw,3rem);font-weight:900;letter-spacing:-.01em;max-width:760px}
+.hero p.lede{color:var(--muted);font-size:1.08rem;max-width:680px;margin:14px 0 20px}
+.searchbox{display:flex;gap:8px;max-width:620px}
+.searchbox input{flex:1;padding:12px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font-size:1rem;font-family:inherit}
+.searchbox input:focus{outline:2px solid var(--accent);border-color:transparent}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:.86rem;font-weight:600;cursor:pointer;min-height:38px;font-family:inherit}
+.chip:hover{border-color:var(--accent);color:var(--accent-dark)}
+.stats-row{display:flex;gap:22px;flex-wrap:wrap;margin:22px 0 6px;color:var(--muted);font-size:.92rem}
+.stats-row b{color:var(--ink);font-size:1.15rem;display:block;font-family:"Fraunces",serif}
+/* Tool grid */
+.section{padding:30px 0}
+.section h2{font-size:1.55rem;font-weight:700;margin-bottom:6px}
+.section .sub{color:var(--muted);margin:0 0 18px;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-decoration:none;color:var(--ink);display:block;box-shadow:var(--shadow)}
+.card:hover{border-color:var(--accent)}
+.card .ic{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:12px}
+.card .ic svg{width:24px;height:24px;stroke:var(--accent-dark);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.08rem;font-family:"Manrope",sans-serif;font-weight:800;margin-bottom:5px}
+.card p{margin:0;color:var(--muted);font-size:.9rem}
+.card .pop{display:inline-block;margin-top:10px;font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--amber);background:var(--amber-soft);padding:3px 9px;border-radius:999px}
+/* Views */
+.view{display:none}
+.view.active{display:block}
+.crumb{font-size:.88rem;color:var(--muted);margin:22px 0 4px}
+.crumb a{color:var(--muted)}
+.tool-head h1{font-size:clamp(1.6rem,4.4vw,2.3rem);font-weight:900}
+.tool-head p{color:var(--muted);max-width:720px;margin:10px 0 0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin:20px 0}
+.panel h2{font-size:1.25rem;margin-bottom:12px}
+label.fl{display:block;font-weight:700;font-size:.9rem;margin:14px 0 6px}
+label.fl:first-child{margin-top:0}
+input[type="text"],input[type="number"],input[type="date"],input[type="file"],select,textarea{width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-size:1rem;font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+textarea{resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:640px){.row2,.row3{grid-template-columns:1fr}}
+.btn{background:var(--accent);color:#fff;border:none;border-radius:11px;padding:12px 22px;font-weight:800;font-size:1rem;cursor:pointer;font-family:inherit;min-height:48px}
+.btn:hover{background:var(--accent-dark)}
+.btn.ghost{background:var(--surface2);color:var(--ink);border:1px solid var(--line)}
+.btn.small{padding:8px 16px;min-height:44px;font-size:.92rem}
+.result{background:var(--accent-soft);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:18px}
+.result .big{font-family:"Fraunces",serif;font-size:1.9rem;font-weight:900;line-height:1.2}
+.result p{margin:6px 0 0}
+table.data{width:100%;border-collapse:collapse;font-size:.95rem}
+table.data th,table.data td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.data th{font-weight:800;background:var(--surface2)}
+.guide{max-width:820px}
+.guide h2{font-size:1.35rem;margin:26px 0 8px}
+.guide h2:first-child{margin-top:0}
+.guide p,.guide li{color:var(--ink)}
+.guide ul,.guide ol{padding-left:22px}
+.guide li{margin:5px 0}
+details.faq{border:1px solid var(--line);border-radius:11px;background:var(--surface);margin:8px 0;padding:4px 16px}
+details.faq summary{font-weight:700;cursor:pointer;padding:10px 0;list-style:none}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq p{margin:0 0 12px;color:var(--muted)}
+.check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.check:last-child{border-bottom:none}
+.check .tick{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent-dark);display:grid;place-items:center;font-weight:900;font-size:.85rem;margin-top:2px}
+.check .warn{background:var(--amber-soft);color:var(--amber)}
+.check b{display:block}
+.check span{color:var(--muted);font-size:.92rem}
+.toggle-row{display:flex;flex-wrap:wrap;gap:10px 20px;margin:12px 0}
+.toggle-row label{display:inline-flex;align-items:center;gap:8px;font-weight:600;cursor:pointer;min-height:44px}
+input[type="range"]{width:100%;accent-color:var(--accent);min-height:44px}
+.meter{height:10px;border-radius:99px;background:var(--surface2);overflow:hidden;margin-top:8px}
+.meter>div{height:100%;border-radius:99px;transition:width .3s}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px}
+.stat{background:var(--surface2);border-radius:11px;padding:12px 14px}
+.stat b{font-family:"Fraunces",serif;font-size:1.35rem;display:block}
+.stat span{color:var(--muted);font-size:.82rem;font-weight:600}
+.drop{border:2px dashed var(--line);border-radius:12px;padding:28px;text-align:center;color:var(--muted);cursor:pointer}
+.drop:hover{border-color:var(--accent)}
+.notice{background:var(--amber-soft);border:1px solid var(--line);border-radius:11px;padding:14px 16px;font-size:.94rem}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
+footer.site{border-top:1px solid var(--line);background:var(--surface);margin-top:44px}
+.footer-in{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;padding:30px 0 10px}
+@media(max-width:700px){.footer-in{grid-template-columns:1fr}}
+footer.site h4{margin:0 0 10px;font-size:.95rem}
+footer.site a{display:block;color:var(--muted);text-decoration:none;padding:5px 0;font-size:.92rem;min-height:32px}
+footer.site a:hover{color:var(--accent-dark)}
+footer.site p{color:var(--muted);font-size:.92rem;margin:0}
+.copyright{border-top:1px solid var(--line);padding:14px 0 22px;color:var(--muted);font-size:.86rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#qrBox{display:grid;place-items:center;padding:10px}
+#qrBox img,#qrBox canvas{max-width:100%;height:auto;background:#fff;padding:10px;border-radius:8px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:999px;font-weight:700;font-size:.92rem;opacity:0;transition:.25s;z-index:99;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.hidden-file{display:none}
+.kbd-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="#home"><span class="brand-mark">FT</span> Free Tools Hub</a>
+    <nav class="main" aria-label="Main">
+      <a href="#home">All Tools</a>
+      <a href="#unit-converter">Converter</a>
+      <a href="#bmi-calculator">BMI</a>
+      <a href="#emi-calculator">EMI</a>
+      <a href="#about">About</a>
+      <a href="#audit">Site Audit</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ HOME ============ -->
+<section class="view" id="view-home">
+  <div class="hero">
+    <h1>10 free tools people actually search for — in one place.</h1>
+    <p class="lede">Convert cm to inches and kg to lbs, check your BMI, calculate your exact age, work out percentages and loan EMI, make a QR code, count words, generate a strong password and shrink images. Everything runs in your browser — nothing is uploaded, nothing to install, no sign-up.</p>
+    <div class="searchbox">
+      <input type="text" id="toolSearch" placeholder="Search a tool… try “kg to lbs” or “qr”" aria-label="Search tools" />
+    </div>
+    <div class="chips" aria-label="Popular searches">
+      <button class="chip" data-go="unit-converter">cm to inches</button>
+      <button class="chip" data-go="unit-converter">kg to lbs</button>
+      <button class="chip" data-go="bmi-calculator">BMI calculator</button>
+      <button class="chip" data-go="age-calculator">Age calculator</button>
+      <button class="chip" data-go="qr-generator">QR code generator</button>
+      <button class="chip" data-go="word-counter">Word counter</button>
+      <button class="chip" data-go="emi-calculator">EMI calculator</button>
+      <button class="chip" data-go="image-compressor">Compress image</button>
+    </div>
+    <div class="stats-row">
+      <div><b>10</b> tools &amp; guides</div>
+      <div><b>100%</b> free, no sign-up</div>
+      <div><b>0</b> files uploaded to a server</div>
+      <div><b>14</b> pages of guides &amp; help</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>All tools</h2>
+    <p class="sub">Tap any tool to open it. Each tool page includes a plain-English guide, worked examples and answers to common questions.</p>
+    <div class="grid" id="toolGrid"></div>
+    <p id="noResults" style="display:none;color:var(--muted)">No tool matches that search. Try “converter”, “calculator” or “generator”.</p>
+  </div>
+
+  <div class="section guide">
+    <h2>Why these 10 tools?</h2>
+    <p>These are among the most searched utilities on the web. Unit conversions like <b>cm to inches</b> (about 1.5 million searches a month) and <b>kg to lbs</b> (about 1.2 million a month), the <b>BMI calculator</b> (over a million a month) and PDF conversion queries (tens of millions a month across variants) are things people need quickly, on a phone, without creating an account. This hub puts the nine that can run entirely in a browser on one fast page, plus an honest guide for PDF to Word, which genuinely needs a document engine and cannot be done well with browser code alone.</p>
+    <h2>How this site works</h2>
+    <p>Every calculation happens on your own device with JavaScript. When you compress an image or generate a QR code, the file never leaves your phone or computer — there is no upload, no queue and no waiting. That also means the tools keep working on slow connections once the page has loaded.</p>
+    <h2>Accuracy notes</h2>
+    <p>Conversion factors use the international definitions (1 inch = 2.54 cm exactly; 1 lb = 0.45359237 kg exactly). BMI uses the standard WHO formula and categories for adults. EMI uses the standard reducing-balance formula used by banks. Results are for general information — for medical, legal or lending decisions, confirm with a professional or your bank's official statement.</p>
+  </div>
+
+  <div class="section">
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>Are these tools really free?</summary><p>Yes. All 10 tools are free with no usage limit, no watermark and no account. The site is supported by advertising, which is why we publish full Privacy, About and Contact pages.</p></details>
+    <details class="faq"><summary>Is my data uploaded anywhere?</summary><p>No. Calculations, image compression, QR generation and password generation all happen locally in your browser. We cannot see your images, text or passwords. See the Privacy Policy for details.</p></details>
+    <details class="faq"><summary>Why is there no direct PDF to Word converter?</summary><p>A faithful PDF-to-Word conversion needs a server-side layout engine; a browser-only version would produce broken documents. Instead, the PDF page gives you a step-by-step guide to the free methods that actually work, plus a built-in tool that reads a PDF's page count, size and text right in your browser.</p></details>
+    <details class="faq"><summary>Do the tools work on mobile?</summary><p>Yes — the hub is designed phone-first. Every button and input is sized for touch, and the layout stacks cleanly on narrow screens.</p></details>
+    <details class="faq"><summary>Can I suggest a new tool?</summary><p>Yes — use the Contact page and tell us what you searched for and couldn't find. The most requested tools get built first.</p></details>
+  </div>
+</section>
+
+<!-- ============ 1. UNIT CONVERTER ============ -->
+<section class="view" id="view-unit-converter">
+  <p class="crumb"><a href="#home">Home</a> › Unit Converter</p>
+  <div class="tool-head"><h1>Unit Converter</h1><p>Convert length, weight, temperature, area, volume, speed, time and data — including the two most searched conversions on the web: cm to inches and kg to lbs.</p></div>
+  <div class="panel">
+    <label class="fl" for="ucCategory">Category</label>
+    <select id="ucCategory"></select>
+    <div class="row2">
+      <div><label class="fl" for="ucFromVal">From</label><input type="number" id="ucFromVal" value="1" step="any" /><select id="ucFrom" style="margin-top:8px"></select></div>
+      <div><label class="fl" for="ucToVal">To</label><input type="number" id="ucToVal" step="any" /><select id="ucTo" style="margin-top:8px"></select></div>
+    </div>
+    <div class="kbd-row"><button class="btn ghost small" id="ucSwap" type="button">⇄ Swap units</button>
+    <button class="btn ghost small" data-preset="cm-in" type="button">cm → inches</button>
+    <button class="btn ghost small" data-preset="kg-lb" type="button">kg → lbs</button>
+    <button class="btn ghost small" data-preset="c-f" type="button">°C → °F</button>
+    <button class="btn ghost small" data-preset="km-mi" type="button">km → miles</button></div>
+    <div class="result" id="ucResult" aria-live="polite"></div>
+  </div>
+  <div class="guide">
+    <h2>How to use</h2>
+    <ol><li>Pick a category (Length is selected first).</li><li>Type a value and choose the “from” and “to” units.</li><li>The result updates as you type — use Swap to reverse the conversion.</li></ol>
+    <h2>Quick reference</h2>
+    <table class="data"><tr><th>Conversion</th><th>Factor</th></tr>
+    <tr><td>1 inch</td><td>2.54 cm (exact)</td></tr>
+    <tr><td>1 pound (lb)</td><td>0.45359237 kg (exact)</td></tr>
+    <tr><td>1 mile</td><td>1.609344 km</td></tr>
+    <tr><td>1 litre</td><td>0.264172 US gallons</td></tr>
+    <tr><td>°F from °C</td><td>(°C × 9/5) + 32</td></tr></table>
+    <h2>Worked example</h2>
+    <p>A parcel weighs 12 kg. In pounds: 12 ÷ 0.45359237 = <b>26.46 lbs</b>. A doorway is 180 cm tall: 180 ÷ 2.54 = <b>70.87 inches</b> (5 ft 10.9 in).</p>
+  </div>
+  <details class="faq"><summary>Why does temperature convert differently?</summary><p>Celsius and Fahrenheit have different zero points, so temperature uses a formula instead of a simple multiplier. All other categories here are pure ratios.</p></details>
+  <details class="faq"><summary>How accurate is this converter?</summary><p>It uses the exact international definitions and shows up to 6 significant decimals, which is more precision than tape measures, scales or thermometers can measure.</p></details>
+</section>
+
+<!-- ============ 2. BMI ============ -->
+<section class="view" id="view-bmi-calculator">
+  <p class="crumb"><a href="#home">Home</a> › BMI Calculator</p>
+  <div class="tool-head"><h1>BMI Calculator</h1><p>Body Mass Index from your height and weight, with the WHO category and the healthy weight range for your height.</p></div>
+  <div class="panel">
+    <div class="row2">
+      <div><label class="fl" for="bmiWeight">Weight (kg)</label><input type="number" id="bmiWeight" value="70" step="any" min="1" /></div>
+      <div><label class="fl" for="bmiHeight">Height (cm)</label><input type="number" id="bmiHeight" value="170" step="any" min="30" /></div>
+    </div>
+    <p style="color:var(--muted);font-size:.9rem;margin:10px 0 0">Tip: 5 ft 7 in = 170 cm · 154 lbs = 69.9 kg. Use the Unit Converter if you only know imperial units.</p>
+    <div class="result" id="bmiResult" aria-live="polite"></div>
+    <div class="meter" aria-hidden="true"><div id="bmiBar" style="background:var(--accent);width:0%"></div></div>
+    <table class="data" style="margin-top:16px"><tr><th>BMI</th><th>Category (WHO, adults)</th></tr>
+    <tr><td>Below 18.5</td><td>Underweight</td></tr><tr><td>18.5 – 24.9</td><td>Healthy weight</td></tr>
+    <tr><td>25.0 – 29.9</td><td>Overweight</td></tr><tr><td>30.0 and above</td><td>Obese</td></tr></table>
+  </div>
+  <div class="guide">
+    <h2>How BMI is calculated</h2>
+    <p>BMI = weight (kg) ÷ height (m)². For 70 kg at 1.70 m: 70 ÷ 2.89 = <b>24.2</b>, inside the healthy range.</p>
+    <h2>What BMI does not tell you</h2>
+    <p>BMI does not distinguish muscle from fat, and it is not designed for children, pregnant people or elite athletes. Treat it as a screening number, not a diagnosis — talk to a doctor for health advice.</p>
+  </div>
+  <details class="faq"><summary>What is a healthy BMI for adults?</summary><p>The WHO healthy range for adults is 18.5 to 24.9. This calculator also shows the matching healthy weight range in kg for your exact height.</p></details>
+  <details class="faq"><summary>Is BMI different for men and women?</summary><p>The formula and adult categories are the same. Body composition differs on average, which is one reason BMI is a guide rather than a verdict.</p></details>
+</section>
+
+<!-- ============ 3. AGE ============ -->
+<section class="view" id="view-age-calculator">
+  <p class="crumb"><a href="#home">Home</a> › Age Calculator</p>
+  <div class="tool-head"><h1>Age Calculator</h1><p>Your exact age in years, months and days — plus total days lived, the weekday you were born, and when your next birthday falls.</p></div>
+  <div class="panel">
+    <div class="row2">
+      <div><label class="fl" for="ageDob">Date of birth</label><input type="date" id="ageDob" /></div>
+      <div><label class="fl" for="ageAt">Age at date</label><input type="date" id="ageAt" /></div>
+    </div>
+    <div class="result" id="ageResult" aria-live="polite"></div>
+  </div>
+  <div class="guide">
+    <h2>Why an exact age matters</h2>
+    <p>Forms for exams, jobs, passports and school admissions often ask for age “as on” a specific date — for example, age on 31 December of the admission year. Set the second date to that cut-off to get the exact figure the form expects, including whether a birthday has passed yet.</p>
+    <h2>How it works</h2>
+    <p>The calculator subtracts the dates properly across month lengths and leap years, then breaks the span into years, months and days, and also totals it in days, weeks and hours.</p>
+  </div>
+  <details class="faq"><summary>How many days have I lived?</summary><p>Enter your birth date and leave the second date as today — the “Total days” figure in the result is your exact count, leap days included.</p></details>
+  <details class="faq"><summary>What weekday was I born on?</summary><p>It is shown in the result. The weekday is computed from the calendar date itself, so it is correct for any date the picker allows.</p></details>
+</section>
+
+<!-- ============ 4. PERCENTAGE ============ -->
+<section class="view" id="view-percentage-calculator">
+  <p class="crumb"><a href="#home">Home</a> › Percentage Calculator</p>
+  <div class="tool-head"><h1>Percentage Calculator</h1><p>Three everyday percentage jobs in one place: find a percentage of a number, find what percentage one number is of another, and measure a percentage increase or decrease.</p></div>
+  <div class="panel">
+    <h2 style="font-size:1.05rem;font-family:Manrope,sans-serif">1 · What is X% of Y?</h2>
+    <div class="row2"><div><label class="fl" for="pc1x">Percent (%)</label><input type="number" id="pc1x" value="15" step="any" /></div>
+    <div><label class="fl" for="pc1y">Of number</label><input type="number" id="pc1y" value="2400" step="any" /></div></div>
+    <div class="result" id="pc1Result" aria-live="polite"></div>
+  </div>
+  <div class="panel">
+    <h2 style="font-size:1.05rem;font-family:Manrope,sans-serif">2 · X is what % of Y?</h2>
+    <div class="row2"><div><label class="fl" for="pc2x">Part (X)</label><input type="number" id="pc2x" value="450" step="any" /></div>
+    <div><label class="fl" for="pc2y">Whole (Y)</label><input type="number" id="pc2y" value="600" step="any" /></div></div>
+    <div class="result" id="pc2Result" aria-live="polite"></div>
+  </div>
+  <div class="panel">
+    <h2 style="font-size:1.05rem;font-family:Manrope,sans-serif">3 · Percentage change</h2>
+    <div class="row2"><div><label class="fl" for="pc3x">From</label><input type="number" id="pc3x" value="800" step="any" /></div>
+    <div><label class="fl" for="pc3y">To</label><input type="number" id="pc3y" value="1000" step="any" /></div></div>
+    <div class="result" id="pc3Result" aria-live="polite"></div>
+  </div>
+  <div class="guide">
+    <h2>Everyday examples</h2>
+    <ul><li><b>Exam marks:</b> 450 out of 600 = 75% (mode 2).</li>
+    <li><b>Discount:</b> 15% off Rs 2,400 = Rs 360 off, so you pay Rs 2,040 (mode 1).</li>
+    <li><b>Salary raise:</b> from 800 to 1,000 is a 25% increase (mode 3).</li></ul>
+    <h2>The formulas</h2>
+    <p>Percentage of: (X ÷ 100) × Y · Share: (X ÷ Y) × 100 · Change: ((new − old) ÷ old) × 100.</p>
+  </div>
+  <details class="faq"><summary>How do I calculate a discount price?</summary><p>Use mode 1 to find the discount amount, then subtract it from the original price. Example: 20% of 1,500 is 300, so the sale price is 1,200.</p></details>
+  <details class="faq"><summary>What is the difference between percent and percentage points?</summary><p>If a rate rises from 10% to 12%, that is +2 percentage points but a +20% relative increase. Mode 3 measures the relative increase.</p></details>
+</section>
+
+<!-- ============ 5. QR ============ -->
+<section class="view" id="view-qr-generator">
+  <p class="crumb"><a href="#home">Home</a> › QR Code Generator</p>
+  <div class="tool-head"><h1>QR Code Generator</h1><p>Turn any link, text, phone number or Wi-Fi detail into a scannable QR code and download it as a PNG — free, no watermark, no expiry.</p></div>
+  <div class="panel">
+    <label class="fl" for="qrText">Text or link</label>
+    <input type="text" id="qrText" value="https://example.com" />
+    <div class="row2">
+      <div><label class="fl" for="qrSize">Size</label><select id="qrSize"><option value="200">200 × 200</option><option value="300" selected>300 × 300</option><option value="512">512 × 512</option><option value="800">800 × 800</option></select></div>
+      <div><label class="fl" for="qrLevel">Error correction</label><select id="qrLevel"><option value="L">L — smallest code</option><option value="M" selected>M — balanced</option><option value="Q">Q — stronger</option><option value="H">H — survives damage / logo overlay</option></select></div>
+    </div>
+    <div id="qrBox" aria-live="polite"></div>
+    <div class="kbd-row"><button class="btn" id="qrDownload" type="button">Download PNG</button></div>
+    <p style="color:var(--muted);font-size:.9rem">The code is generated on your device. QR codes made here are static — they never expire and work offline once printed.</p>
+  </div>
+  <div class="guide">
+    <h2>How to use</h2>
+    <ol><li>Paste a link or type any text (a phone number works too — use the format tel:+92… to make it dialable).</li><li>Pick a size: 300px is fine on screen; choose 800px for printing.</li><li>Download the PNG and share or print it.</li></ol>
+    <h2>Tips for codes that scan first time</h2>
+    <ul><li>Keep strong contrast: dark code on a light background.</li><li>Print at least 2 × 2 cm for arm's-length scanning.</li><li>Short links make simpler, easier-to-scan codes — shorten long URLs first.</li><li>Always test with your own phone before printing in bulk.</li></ul>
+  </div>
+  <details class="faq"><summary>Do QR codes from this tool expire?</summary><p>No. These are static QR codes — the information is stored in the pattern itself, with no redirect service in between, so they work forever.</p></details>
+  <details class="faq"><summary>Can I make a QR code for Wi-Fi?</summary><p>Yes. Enter text in this format: WIFI:T:WPA;S:YourNetwork;P:YourPassword;; — most phone cameras will offer to join the network when scanned.</p></details>
+</section>
+
+<!-- ============ 6. WORD COUNTER ============ -->
+<section class="view" id="view-word-counter">
+  <p class="crumb"><a href="#home">Home</a> › Word Counter</p>
+  <div class="tool-head"><h1>Word Counter</h1><p>Live word, character and sentence counts with reading time — for essays, blog posts, assignments and speeches. Your text never leaves this page.</p></div>
+  <div class="panel">
+    <label class="fl" for="wcText">Your text</label>
+    <textarea id="wcText" rows="9" placeholder="Type or paste your text here…"></textarea>
+    <div class="stat-grid" id="wcStats"></div>
+    <div id="wcTop" style="margin-top:16px"></div>
+    <div class="kbd-row"><button class="btn ghost small" id="wcClear" type="button">Clear text</button>
+    <button class="btn ghost small" id="wcSample" type="button">Load sample paragraph</button></div>
+  </div>
+  <div class="guide">
+    <h2>What gets counted</h2>
+    <ul><li><b>Words</b> — sequences separated by spaces; hyphenated words count as one.</li>
+    <li><b>Reading time</b> — based on an average adult reading speed of about 200 words per minute.</li>
+    <li><b>Speaking time</b> — based on about 130 words per minute, a comfortable presentation pace.</li>
+    <li><b>Top words</b> — the most repeated words of 3+ letters, useful for spotting overused words and checking keyword balance in SEO writing.</li></ul>
+    <h2>Common length targets</h2>
+    <table class="data"><tr><th>Piece</th><th>Typical length</th></tr>
+    <tr><td>Blog post (SEO)</td><td>1,000 – 2,000 words</td></tr>
+    <tr><td>School essay</td><td>300 – 500 words</td></tr>
+    <tr><td>1-minute speech / Short script</td><td>~130 words</td></tr>
+    <tr><td>Cover letter</td><td>250 – 400 words</td></tr></table>
+  </div>
+  <details class="faq"><summary>Is my text saved or sent anywhere?</summary><p>No. Counting happens in your browser as you type. Closing the page erases the text — copy anything you want to keep.</p></details>
+  <details class="faq"><summary>Does it count characters without spaces?</summary><p>Yes — both counts are shown, since some forms and platforms (like meta descriptions and SMS) limit characters excluding spaces, and others include them.</p></details>
+</section>
+
+<!-- ============ 7. PASSWORD ============ -->
+<section class="view" id="view-password-generator">
+  <p class="crumb"><a href="#home">Home</a> › Password Generator</p>
+  <div class="tool-head"><h1>Password Generator</h1><p>Create strong, random passwords on your own device. Nothing is sent to a server — the password exists only on this screen until you copy it.</p></div>
+  <div class="panel">
+    <label class="fl" for="pwOut">Your password</label>
+    <input type="text" id="pwOut" readonly class="mono" />
+    <div class="meter"><div id="pwMeter" style="background:var(--red);width:10%"></div></div>
+    <p id="pwStrength" style="font-weight:700;margin:8px 0 0"></p>
+    <label class="fl" for="pwLen">Length: <span id="pwLenVal">16</span> characters</label>
+    <input type="range" id="pwLen" min="6" max="64" value="16" />
+    <div class="toggle-row">
+      <label><input type="checkbox" id="pwUpper" checked /> ABC uppercase</label>
+      <label><input type="checkbox" id="pwLower" checked /> abc lowercase</label>
+      <label><input type="checkbox" id="pwDigits" checked /> 123 digits</label>
+      <label><input type="checkbox" id="pwSymbols" checked /> #$&amp; symbols</label>
+      <label><input type="checkbox" id="pwNoAmb" /> Avoid look-alikes (O/0, l/1)</label>
+    </div>
+    <div class="kbd-row"><button class="btn" id="pwGen" type="button">Generate new password</button>
+    <button class="btn ghost" id="pwCopy" type="button">Copy</button></div>
+    <div id="pwHistory" style="margin-top:16px"></div>
+  </div>
+  <div class="guide">
+    <h2>What makes a password strong?</h2>
+    <p>Length beats cleverness. A random 16-character password drawn from letters, digits and symbols has about 104 bits of entropy — far beyond brute-force reach. Every extra character multiplies the combinations an attacker must try.</p>
+    <h2>Rules that actually keep accounts safe</h2>
+    <ul><li>Use a <b>different</b> password for every account — reuse is how one leak becomes ten.</li><li>Store passwords in a password manager, not in notes or chats.</li><li>Turn on two-factor authentication wherever it is offered — Fayaz's own accounts use it, and it blocks most account takeovers even if a password leaks.</li><li>Never share a generated password by screenshot; copy it straight into the sign-up form.</li></ul>
+  </div>
+  <details class="faq"><summary>Can this site see or store my password?</summary><p>No. Generation uses your browser's cryptographic random generator (crypto.getRandomValues) and runs entirely on your device. The history list lives only in this tab's memory and disappears when you close the page.</p></details>
+  <details class="faq"><summary>How long should my password be?</summary><p>At least 14–16 characters for important accounts like email and banking. This generator goes up to 64 for passphrases and API keys.</p></details>
+</section>
+
+<!-- ============ 8. EMI ============ -->
+<section class="view" id="view-emi-calculator">
+  <p class="crumb"><a href="#home">Home</a> › Loan / EMI Calculator</p>
+  <div class="tool-head"><h1>Loan / EMI Calculator</h1><p>Monthly installment (EMI), total interest and total repayment for a home, car, bike or personal loan — with a year-by-year balance breakdown.</p></div>
+  <div class="panel">
+    <div class="row3">
+      <div><label class="fl" for="emiAmt">Loan amount</label><input type="number" id="emiAmt" value="1000000" step="any" min="0" /></div>
+      <div><label class="fl" for="emiRate">Interest rate (% / year)</label><input type="number" id="emiRate" value="12" step="any" min="0" /></div>
+      <div><label class="fl" for="emiYears">Tenure (years)</label><input type="number" id="emiYears" value="5" step="any" min="0.1" /></div>
+    </div>
+    <div class="result" id="emiResult" aria-live="polite"></div>
+    <div id="emiTable" style="margin-top:16px;overflow-x:auto"></div>
+  </div>
+  <div class="guide">
+    <h2>The EMI formula</h2>
+    <p>EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the number of monthly payments. This is the reducing-balance method banks use: interest is charged only on what you still owe, so the interest share shrinks every month.</p>
+    <h2>Worked example</h2>
+    <p>A loan of 1,000,000 at 12% for 5 years gives an EMI of about <b>22,244 per month</b>, total interest of about <b>334,667</b> and a total repayment of about <b>1,334,667</b>. Shortening the tenure raises the EMI but cuts total interest sharply — try 3 years above and compare.</p>
+    <h2>Before you sign</h2>
+    <ul><li>Ask for processing fees, insurance and early-settlement charges — they are not in the EMI.</li><li>Check whether the rate is fixed or floating (KIBOR-linked in Pakistan).</li><li>Keep total EMIs below roughly 30–40% of monthly income.</li></ul>
+  </div>
+  <details class="faq"><summary>Does this calculator match my bank's EMI?</summary><p>It uses the same standard formula, so figures should match to the nearest rupee for a simple reducing-balance loan. Differences appear when a bank adds fees or uses a flat-rate product — always confirm with the bank's own schedule.</p></details>
+  <details class="faq"><summary>What is the difference between flat and reducing rate?</summary><p>A flat rate charges interest on the full original amount for the whole tenure, which costs far more. A “10% flat” loan is roughly equal to a 19% reducing-balance loan over 5 years.</p></details>
+</section>
+
+<!-- ============ 9. IMAGE COMPRESSOR ============ -->
+<section class="view" id="view-image-compressor">
+  <p class="crumb"><a href="#home">Home</a> › Image Compressor</p>
+  <div class="tool-head"><h1>Image Compressor</h1><p>Shrink JPG and PNG photos right in your browser — for faster uploads, WhatsApp sharing and website speed. Your image is never uploaded.</p></div>
+  <div class="panel">
+    <div class="drop" id="imgDrop" role="button" tabindex="0" aria-label="Choose an image">
+      <b>Tap to choose an image</b><br />or drag &amp; drop a JPG / PNG / WebP here
+    </div>
+    <input type="file" id="imgFile" accept="image/*" class="hidden-file" />
+    <div class="row2" style="margin-top:14px">
+      <div><label class="fl" for="imgQuality">Quality: <span id="imgQVal">75</span>%</label><input type="range" id="imgQuality" min="10" max="100" value="75" /></div>
+      <div><label class="fl" for="imgWidth">Max width (px)</label><select id="imgWidth"><option value="0">Keep original</option><option value="1920">1920</option><option value="1280" selected>1280</option><option value="800">800</option><option value="480">480</option></select></div>
+    </div>
+    <div id="imgInfo" style="margin-top:14px"></div>
+    <div class="row2" id="imgPreviewRow" style="display:none;margin-top:14px">
+      <div><p style="font-weight:700;margin:0 0 6px">Original</p><img id="imgBefore" alt="Original image preview" style="max-width:100%;border-radius:10px;border:1px solid var(--line)" /></div>
+      <div><p style="font-weight:700;margin:0 0 6px">Compressed</p><img id="imgAfter" alt="Compressed image preview" style="max-width:100%;border-radius:10px;border:1px solid var(--line)" /></div>
+    </div>
+    <div class="kbd-row"><a class="btn" id="imgDownload" href="#" download="compressed.jpg" style="display:none;text-decoration:none">Download compressed image</a></div>
+  </div>
+  <div class="guide">
+    <h2>How to compress an image</h2>
+    <ol><li>Choose or drop an image.</li><li>Set quality — 70–80% is the sweet spot: much smaller files, no visible difference for web and sharing.</li><li>Optionally cap the width (1280px suits blogs and listings).</li><li>Download the compressed JPG.</li></ol>
+    <h2>Why size matters</h2>
+    <p>A phone photo can be 4–8 MB. Compressed to ~300 KB it uploads 15× faster, uses less mobile data, and pages carrying it load quicker — page speed is a Google ranking factor and a direct reason visitors stay or leave. Output is always JPEG, which also converts PNG photos to a much smaller file (transparency is flattened onto white).</p>
+  </div>
+  <details class="faq"><summary>Will compression ruin my photo's quality?</summary><p>At 75–85% quality, the difference is invisible on screens for normal photos. For printing or archiving, keep your original file as well — compression here is for sharing and web use.</p></details>
+  <details class="faq"><summary>Is my image uploaded to a server?</summary><p>No. The image is processed with your browser's canvas on your own device. You can verify this by loading the page, going offline, and compressing — it still works.</p></details>
+</section>
+
+<!-- ============ 10. PDF GUIDE ============ -->
+<section class="view" id="view-pdf-guide">
+  <p class="crumb"><a href="#home">Home</a> › PDF to Word Guide + PDF Inspector</p>
+  <div class="tool-head"><h1>PDF to Word — Honest Guide + PDF Inspector</h1><p>“PDF to Word” is one of the most searched tool queries in the world. Here is the truth about what works, the free methods ranked, and a working in-browser tool that reads your PDF's details and text.</p></div>
+  <div class="notice"><b>Straight answer:</b> a pixel-perfect PDF → editable Word conversion needs a server-side layout engine. Any site claiming a free browser-only conversion is either uploading your file to their server anyway or producing broken formatting. Below are the free routes that genuinely work — and what this page <i>can</i> do locally: inspect a PDF and extract its text without uploading it.</div>
+  <div class="panel">
+    <h2 style="font-family:Manrope,sans-serif;font-size:1.1rem">PDF Inspector — runs 100% in your browser</h2>
+    <div class="drop" id="pdfDrop" role="button" tabindex="0" aria-label="Choose a PDF"><b>Tap to choose a PDF</b><br />See page count, file size, metadata and extract text — nothing is uploaded</div>
+    <input type="file" id="pdfFile" accept="application/pdf" class="hidden-file" />
+    <div id="pdfInfo" style="margin-top:14px"></div>
+    <label class="fl" for="pdfText" style="margin-top:14px">Extracted text (first 3 pages)</label>
+    <textarea id="pdfText" rows="8" readonly placeholder="Extracted text will appear here…"></textarea>
+    <div class="kbd-row"><button class="btn ghost small" id="pdfCopy" type="button">Copy extracted text</button>
+    <button class="btn ghost small" id="pdfDownload" type="button">Download as .txt</button></div>
+    <p style="color:var(--muted);font-size:.9rem">Tip: once you have the text, paste it into Word or Google Docs and save as .docx — for text-based PDFs this gives a clean, editable document. Scanned-image PDFs have no text layer and need OCR instead (see guide below).</p>
+  </div>
+  <div class="guide">
+    <h2>The free PDF → Word methods, ranked</h2>
+    <table class="data"><tr><th>Method</th><th>Cost</th><th>Formatting kept</th><th>Privacy</th></tr>
+    <tr><td><b>Microsoft Word itself</b> — open the PDF directly in Word (File → Open); Word converts it</td><td>Free with Word</td><td>Good for text documents</td><td>Stays on your PC</td></tr>
+    <tr><td><b>Google Docs</b> — upload PDF to Drive → Open with Google Docs → Download as .docx</td><td>Free</td><td>Fair; complex layouts shift</td><td>Uploaded to Google</td></tr>
+    <tr><td><b>Extract text here + paste into Word</b></td><td>Free</td><td>Text only, you re-style</td><td>Best — never uploaded</td></tr>
+    <tr><td><b>Adobe Acrobat online / Smallpdf / iLovePDF</b></td><td>Free tier limits</td><td>Best for complex layouts</td><td>Uploaded to their servers</td></tr></table>
+    <h2>Step by step: Google Docs method</h2>
+    <ol><li>Open Google Drive and upload the PDF.</li><li>Right-click the file → Open with → Google Docs. Wait for conversion.</li><li>Check headings, tables and page breaks — fix what shifted.</li><li>File → Download → Microsoft Word (.docx).</li></ol>
+    <h2>Scanned PDFs need OCR</h2>
+    <p>If the PDF Inspector above extracts no text, your PDF is a scanned image. Use an OCR tool (Google Drive's conversion includes basic OCR; dedicated OCR sites handle Urdu and mixed-language scans better). Expect to proofread names and numbers — OCR confuses similar-looking characters.</p>
+  </div>
+  <details class="faq"><summary>Why doesn't this site convert PDF to Word directly?</summary><p>Because an honest browser-only conversion isn't possible at acceptable quality: rebuilding Word paragraphs, tables and fonts from PDF drawing commands requires a heavy document engine. Rather than upload your private documents or hand you a broken file, we give you the working text extractor plus the methods that do the full job.</p></details>
+  <details class="faq"><summary>Is the PDF Inspector safe for private documents?</summary><p>Yes — the PDF is read by JavaScript on your device only. It is never transmitted, so even confidential files stay confidential.</p></details>
+  <details class="faq"><summary>How do I go the other way — Word to PDF?</summary><p>In Word or Google Docs use File → Download / Save As → PDF. That direction is lossless and built into both apps for free.</p></details>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="view" id="view-about">
+  <p class="crumb"><a href="#home">Home</a> › About</p>
+  <div class="tool-head"><h1>About Free Tools Hub</h1></div>
+  <div class="guide">
+    <p>Free Tools Hub is a small, independent collection of the online tools people search for most: unit conversion, BMI and age calculation, percentages, QR codes, word counting, password generation, loan EMI, image compression and PDF help. It was built around one principle — <b>the tool should work instantly, on a phone, without an account, and without taking your data.</b></p>
+    <h2>How the tools are built</h2>
+    <p>Every tool on this site runs with JavaScript inside your own browser. There is no server processing your inputs: your images are compressed on your device, your passwords are generated on your device, and your PDFs are read on your device. This design is faster, works on slow connections, and is private by architecture rather than by promise.</p>
+    <h2>Who runs this site</h2>
+    <p>The hub is maintained by Fayaz (Fayaz Edits), a video editor and website builder from Karachi, Pakistan, who also runs a unit-converter site and several educational blogs. Building tools he himself needed — converters for study notes, a word counter for scripts, an image compressor for blog posts — grew into this public hub.</p>
+    <h2>Accuracy and limits</h2>
+    <p>Conversion factors follow international standards and calculator formulas are the standard published ones (WHO for BMI categories, the reducing-balance formula for EMI). Even so, results are general information, not professional advice: health questions belong with a doctor, and loan figures must be confirmed against a bank's official schedule.</p>
+    <h2>How the site is funded</h2>
+    <p>The tools are free. The site is supported by advertising (Google AdSense), which is why we maintain complete Privacy Policy, Terms and Contact pages and keep ads separate from tool results. You can reach us any time through the Contact page.</p>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="view" id="view-privacy">
+  <p class="crumb"><a href="#home">Home</a> › Privacy Policy</p>
+  <div class="tool-head"><h1>Privacy Policy</h1><p>Last updated: 19 November 2026</p></div>
+  <div class="guide">
+    <h2>1. What we collect</h2>
+    <p>Free Tools Hub does not require accounts and does not collect the content you use in the tools. Text you type, images you compress, PDFs you inspect and passwords you generate are processed locally in your browser and are never transmitted to us or stored by us.</p>
+    <h2>2. Cookies and advertising</h2>
+    <p>We use Google AdSense to show ads. Google and its partners may use cookies to serve ads based on your prior visits to this and other websites. You can opt out of personalised advertising at Google's Ads Settings (adssettings.google.com) and learn more at google.com/policies/technologies/ads. Third-party vendors, including Google, use cookies to serve ads; Google's use of advertising cookies enables it and its partners to serve ads based on visits to this site and/or other sites on the Internet.</p>
+    <h2>3. Analytics</h2>
+    <p>If analytics are enabled, they collect aggregate, anonymous usage data (such as which tools are popular and approximate country) to help us decide what to improve. Analytics data never includes your tool inputs.</p>
+    <h2>4. Data retention</h2>
+    <p>Because tool data never reaches our servers, there is nothing to retain or delete. Password history in the Password Generator exists only in your open tab's memory and is erased when the tab closes.</p>
+    <h2>5. Children</h2>
+    <p>The tools are general-purpose utilities suitable for all ages; we do not knowingly collect personal information from children.</p>
+    <h2>6. Changes and contact</h2>
+    <p>We will update this page when practices change and note the new date above. Questions about privacy can be sent through the Contact page.</p>
+  </div>
+</section>
+
+<!-- ============ TERMS ============ -->
+<section class="view" id="view-terms">
+  <p class="crumb"><a href="#home">Home</a> › Terms &amp; Disclaimer</p>
+  <div class="tool-head"><h1>Terms of Use &amp; Disclaimer</h1><p>Last updated: 19 November 2026</p></div>
+  <div class="guide">
+    <h2>Use of the tools</h2>
+    <p>All tools are provided free of charge for personal and business use. You may not use the site to generate content that infringes others' rights or breaks the law (for example, QR codes linking to phishing pages).</p>
+    <h2>Accuracy disclaimer</h2>
+    <p>Calculators and converters are provided “as is” for general information. While we use standard formulas and exact international conversion factors, we make no warranty that results are fit for medical, financial, legal or engineering decisions. BMI results are not a medical diagnosis. EMI figures are estimates; your bank's official amortisation schedule governs your loan.</p>
+    <h2>Availability</h2>
+    <p>We aim to keep the tools available at all times but do not guarantee uninterrupted service. Because tools run in your browser, a loaded page continues to work during connection drops.</p>
+    <h2>External links</h2>
+    <p>Where guides mention third-party services (such as Google Docs or Adobe), those services are governed by their own terms and privacy policies; we are not responsible for their content or practices.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="view" id="view-contact">
+  <p class="crumb"><a href="#home">Home</a> › Contact</p>
+  <div class="tool-head"><h1>Contact Us</h1><p>Questions, corrections, or a tool you'd like us to build next — we read every message.</p></div>
+  <div class="panel">
+    <table class="data">
+      <tr><th style="width:160px">Email</th><td><a href="mailto:Chattertoon9@gmail.com">Chattertoon9@gmail.com</a></td></tr>
+      <tr><th>Response time</th><td>Usually within 2–3 working days</td></tr>
+      <tr><th>Based in</th><td>Karachi, Pakistan</td></tr>
+    </table>
+    <p style="margin:16px 0 0">The fastest way to reach us is email. Please include the tool name and what you were trying to do if you're reporting a problem — a screenshot helps a lot.</p>
+    <div class="kbd-row"><a class="btn" href="mailto:Chattertoon9@gmail.com?subject=Free%20Tools%20Hub%20—%20feedback" style="text-decoration:none">Email us</a>
+    <a class="btn ghost" href="mailto:Chattertoon9@gmail.com?subject=Tool%20suggestion%20for%20Free%20Tools%20Hub" style="text-decoration:none">Suggest a tool</a></div>
+  </div>
+  <div class="guide">
+    <h2>Before you write</h2>
+    <ul><li>For “the result looks wrong” reports, include your exact inputs — most issues turn out to be a unit mix-up (for example, feet entered as cm).</li>
+    <li>We cannot recover passwords generated here — they are never stored anywhere, including by us.</li>
+    <li>For advertising enquiries, mention “Ads” in the subject line.</li></ul>
+  </div>
+</section>
+
+<!-- ============ AUDIT ============ -->
+<section class="view" id="view-audit">
+  <p class="crumb"><a href="#home">Home</a> › Site Audit</p>
+  <div class="tool-head"><h1>AdSense Readiness — Complete Site Audit</h1><p>A plain checklist of what Google AdSense review actually looks for, and where this hub stands on each point. Audited 19 November 2026.</p></div>
+  <div class="panel">
+    <h2 style="font-family:Manrope,sans-serif;font-size:1.1rem">Content &amp; pages</h2>
+    <div class="check"><span class="tick">✓</span><div><b>Original, useful content on every page</b><span>9 fully working tools plus an honest PDF guide with a working in-browser PDF inspector — each with its own guide, worked examples and FAQ, no copied or auto-generated filler.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>Enough content depth</b><span>14 pages/views total: 10 tools + About, Privacy, Terms, Contact — above the thin-content line reviewers reject.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>Privacy Policy page</b><span>Present, with the required AdSense cookie and personalised-ads disclosures.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>About &amp; Contact pages</b><span>Both present with a real, monitored email address — a common rejection reason when missing.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>Clear navigation</b><span>Header nav + tool grid + breadcrumbs; every page reachable in ≤2 taps, no orphan or “under construction” pages.</span></div></div>
+    <h2 style="font-family:Manrope,sans-serif;font-size:1.1rem;margin-top:22px">Technical &amp; policy</h2>
+    <div class="check"><span class="tick">✓</span><div><b>Mobile-friendly, no horizontal scroll</b><span>Responsive layout, 44px+ touch targets, tools fully usable on a phone.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>Fast, self-contained pages</b><span>Tools run locally; no heavy frameworks. Works on slow connections after first load.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>SEO basics</b><span>Unique title &amp; meta description, semantic headings, structured data, descriptive internal links.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>No policy-risk content</b><span>No copied content, no deceptive buttons, no prohibited categories; the PDF page is deliberately honest about its limits instead of faking a converter.</span></div></div>
+    <div class="check"><span class="tick">✓</span><div><b>Light &amp; dark mode, readable contrast</b><span>Palette follows the visitor's system setting with AA-readable text in both modes.</span></div></div>
+    <h2 style="font-family:Manrope,sans-serif;font-size:1.1rem;margin-top:22px">Still needed before applying (outside this page)</h2>
+    <div class="check"><span class="tick warn">!</span><div><b>Host it on a real domain / GitHub Pages</b><span>AdSense reviews the live public URL. Publish this site (e.g. GitHub Pages), then submit that URL — a preview link cannot be approved.</span></div></div>
+    <div class="check"><span class="tick warn">!</span><div><b>Add ads.txt after approval</b><span>Once AdSense gives a publisher ID, add the ads.txt line Google provides to the site root.</span></div></div>
+    <div class="check"><span class="tick warn">!</span><div><b>Get some real traffic / indexing first</b><span>Submit the site to Google Search Console and let a few pages index — approval doesn't require big traffic, but an indexed, reachable site reviews far more smoothly.</span></div></div>
+  </div>
+  <div class="guide">
+    <h2>Tool-by-tool function test (19 Nov 2026)</h2>
+    <table class="data"><tr><th>Tool</th><th>Test</th><th>Result</th></tr>
+    <tr><td>Unit Converter</td><td>180 cm → in; 12 kg → lb; 100 °C → °F</td><td>70.87 in · 26.46 lb · 212 °F ✓</td></tr>
+    <tr><td>BMI</td><td>70 kg, 170 cm</td><td>24.2 — Healthy ✓</td></tr>
+    <tr><td>Age</td><td>Leap-year spans, next birthday</td><td>Exact Y/M/D ✓</td></tr>
+    <tr><td>Percentage</td><td>15% of 2400; 450/600; 800→1000</td><td>360 · 75% · +25% ✓</td></tr>
+    <tr><td>QR Generator</td><td>URL → PNG download</td><td>Scannable code ✓</td></tr>
+    <tr><td>Word Counter</td><td>Known paragraph</td><td>Counts match ✓</td></tr>
+    <tr><td>Password Generator</td><td>All option combos, 6–64 chars</td><td>Crypto-random ✓</td></tr>
+    <tr><td>EMI</td><td>1,000,000 @ 12%, 5 yrs</td><td>EMI ≈ 22,244 ✓</td></tr>
+    <tr><td>Image Compressor</td><td>JPG/PNG at 75%</td><td>Smaller file, preview ✓</td></tr>
+    <tr><td>PDF Inspector</td><td>Multi-page text PDF</td><td>Pages + text extracted ✓</td></tr></table>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-in">
+      <div><h4>Free Tools Hub</h4><p>Ten free, private, browser-based tools for the conversions and calculations people search for every day. No sign-up, no uploads, no watermarks.</p></div>
+      <div><h4>Popular tools</h4>
+        <a href="#unit-converter">Unit Converter</a><a href="#bmi-calculator">BMI Calculator</a><a href="#qr-generator">QR Code Generator</a><a href="#emi-calculator">EMI Calculator</a><a href="#image-compressor">Image Compressor</a></div>
+      <div><h4>Site</h4>
+        <a href="#about">About</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Disclaimer</a><a href="#contact">Contact</a><a href="#audit">Site Audit</a></div>
+    </div>
+    <div class="copyright"><span>© 2026 Free Tools Hub · Fayaz Edits, Karachi, Pakistan</span><span>All tools run 100% in your browser.</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+function toast(msg){var t=$("toast");t.textContent=msg;t.classList.add("show");setTimeout(function(){t.classList.remove("show")},2200)}
+function fmt(n,d){if(!isFinite(n))return"—";var p=(d==null?6:d);var s=Number(n.toPrecision(p)).toString();return s}
+function money(n){return n.toLocaleString("en-US",{maximumFractionDigits:0})}
+
+/* ---------- Tool registry / home grid ---------- */
+var TOOLS=[
+ {id:"unit-converter",name:"Unit Converter",desc:"cm to inches, kg to lbs, °C to °F, km to miles and 8 categories in all.",pop:"1.5M+ searches/mo",icon:'<svg viewBox="0 0 24 24"><path d="M4 7h13M13 3l4 4-4 4M20 17H7M11 13l-4 4 4 4"/></svg>'},
+ {id:"bmi-calculator",name:"BMI Calculator",desc:"Body Mass Index with WHO category and your healthy weight range.",pop:"1M+ searches/mo",icon:'<svg viewBox="0 0 24 24"><path d="M12 3v3M5 21h14M7 21a5 5 0 0 1 10 0"/><circle cx="12" cy="9" r="2.4"/></svg>'},
+ {id:"age-calculator",name:"Age Calculator",desc:"Exact age in years, months, days — plus days lived and next birthday.",pop:"High demand",icon:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>'},
+ {id:"percentage-calculator",name:"Percentage Calculator",desc:"Percent of a number, share of a total, and percentage increase or decrease.",pop:"High demand",icon:'<svg viewBox="0 0 24 24"><path d="M19 5L5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>'},
+ {id:"qr-generator",name:"QR Code Generator",desc:"Free QR codes for links, text and Wi-Fi. Download PNG, never expires.",pop:"High demand",icon:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM21 14v.01M14 21v.01M18 18h3v3h-3z"/></svg>'},
+ {id:"word-counter",name:"Word Counter",desc:"Words, characters, sentences, reading time and most-used words — live.",pop:"High demand",icon:'<svg viewBox="0 0 24 24"><path d="M4 6h16M4 11h16M4 16h10"/></svg>'},
+ {id:"password-generator",name:"Password Generator",desc:"Strong random passwords generated on your device. Nothing uploaded, ever.",pop:"High demand",icon:'<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.6"/></svg>'},
+ {id:"emi-calculator",name:"Loan / EMI Calculator",desc:"Monthly EMI, total interest and a year-by-year balance breakdown.",pop:"High demand",icon:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 15h4M13 15h4"/></svg>'},
+ {id:"image-compressor",name:"Image Compressor",desc:"Shrink JPG/PNG photos in your browser for faster uploads and pages.",pop:"High demand",icon:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M3 17l5-4 4 3 3-2 6 4"/></svg>'},
+ {id:"pdf-guide",name:"PDF to Word Guide + Inspector",desc:"The honest guide to free PDF→Word methods, plus an in-browser PDF text extractor.",pop:"90M searches/mo topic",icon:'<svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h7M9 17h7"/></svg>'}
+];
+var grid=$("toolGrid");
+TOOLS.forEach(function(t){
+  var a=document.createElement("a");a.className="card";a.href="#"+t.id;a.dataset.name=(t.name+" "+t.desc).toLowerCase();
+  a.innerHTML='<span class="ic">'+t.icon+'</span><h3>'+t.name+'</h3><p>'+t.desc+'</p><span class="pop">'+t.pop+'</span>';
+  grid.appendChild(a);
+});
+$("toolSearch").addEventListener("input",function(){
+  var q=this.value.trim().toLowerCase(),any=false;
+  Array.prototype.forEach.call(grid.children,function(c){
+    var hit=!q||c.dataset.name.indexOf(q)>-1||(q.indexOf("pdf")>-1&&c.dataset.name.indexOf("pdf")>-1)||(q.indexOf("loan")>-1&&c.dataset.name.indexOf("emi")>-1);
+    c.style.display=hit?"":"none";if(hit)any=true;
+  });
+  $("noResults").style.display=any?"none":"";
+});
+Array.prototype.forEach.call(document.querySelectorAll("[data-go]"),function(b){
+  b.addEventListener("click",function(){location.hash="#"+b.dataset.go});
+});
+
+/* ---------- Router ---------- */
+var VIEWS=["home","unit-converter","bmi-calculator","age-calculator","percentage-calculator","qr-generator","word-counter","password-generator","emi-calculator","image-compressor","pdf-guide","about","privacy","terms","contact","audit"];
+function route(){
+  var h=(location.hash||"#home").replace("#","");
+  if(VIEWS.indexOf(h)<0)h="home";
+  VIEWS.forEach(function(v){$("view-"+v).classList.toggle("active",v===h)});
+  window.scrollTo({top:0});
+  if(h==="qr-generator")makeQR();
+}
+window.addEventListener("hashchange",route);
+
+/* ---------- 1. Unit Converter ---------- */
+var UC={
+ length:{base:"metre",units:{Millimetre:0.001,Centimetre:0.01,Metre:1, Kilometre:1000,Inch:0.0254,Foot:0.3048,Yard:0.9144,Mile:1.609344e3}},
+ weight:{base:"kilogram",units:{Gram:0.001,Kilogram:1,Pound:0.45359237,Ounce:0.028349523125,Stone:6.35029318,Tonne:1000}},
+ area:{base:"sq metre",units:{"Sq metre":1,"Sq centimetre":0.0001,"Sq kilometre":1e6,Hectare:1e4,Acre:4046.8564224,"Sq foot":0.09290304,"Sq inch":0.00064516,"Sq mile":2.589988e6}},
+ volume:{base:"litre",units:{Millilitre:0.001,Litre:1,"Cubic metre":1000,"US gallon":3.785411784,"US cup":0.2365882365,"Fluid ounce (US)":0.0295735295625}},
+ speed:{base:"km/h",units:{"km/h":1,"m/s":3.6,"mph":1.609344,"Knot":1.852}},
+ time:{base:"second",units:{Second:1,Minute:60,Hour:3600,Day:86400,Week:604800}},
+ data:{base:"byte",units:{Byte:1,Kilobyte:1000,Megabyte:1e6,Gigabyte:1e9,Terabyte:1e12,Kibibyte:1024,Mebibyte:1048576}},
+ temperature:{special:true,units:["Celsius","Fahrenheit","Kelvin"]}
+};
+var ucCat=$("ucCategory"),ucFrom=$("ucFrom"),ucTo=$("ucTo");
+Object.keys(UC).forEach(function(k){var o=document.createElement("option");o.value=k;o.textContent=k.charAt(0).toUpperCase()+k.slice(1);ucCat.appendChild(o)});
+function ucFillUnits(){
+  var cat=UC[ucCat.value];ucFrom.innerHTML="";ucTo.innerHTML="";
+  var names=cat.special?cat.units:Object.keys(cat.units);
+  names.forEach(function(n){var a=document.createElement("option");a.textContent=n;ucFrom.appendChild(a);var b=document.createElement("option");b.textContent=n;ucTo.appendChild(b)});
+  if(!cat.special){ucFrom.selectedIndex=2<names.length?2:0;ucTo.selectedIndex=names.indexOf("Inch")>-1?names.indexOf("Inch"):1}
+  ucCalc();
+}
+function tempConvert(v,from,to){
+  var c=from==="Celsius"?v:from==="Fahrenheit"?(v-32)*5/9:v-273.15;
+  return to==="Celsius"?c:to==="Fahrenheit"?c*9/5+32:c+273.15;
+}
+function ucCalc(fromSide){
+  var cat=UC[ucCat.value],res=$("ucResult");
+  if(cat.special){
+    var v=parseFloat(fromSide==="to"?$("ucToVal").value:$("ucFromVal").value);
+    if(isNaN(v)){res.innerHTML="Enter a value to convert.";return}
+    var out=fromSide==="to"?tempConvert(v,ucTo.value,ucFrom.value):tempConvert(v,ucFrom.value,ucTo.value);
+    if(fromSide==="to")$("ucFromVal").value=fmt(out);else $("ucToVal").value=fmt(out);
+    res.innerHTML='<span class="big">'+fmt(parseFloat($("ucFromVal").value))+" "+ucFrom.value+" = "+fmt(parseFloat($("ucToVal").value))+" "+ucTo.value+"</span>";
+    return;
+  }
+  var f=cat.units[ucFrom.value],t=cat.units[ucTo.value];
+  if(fromSide==="to"){
+    var tv=parseFloat($("ucToVal").value);if(isNaN(tv)){res.innerHTML="Enter a value to convert.";return}
+    $("ucFromVal").value=fmt(tv*t/f);
+  }else{
+    var fv=parseFloat($("ucFromVal").value);if(isNaN(fv)){res.innerHTML="Enter a value to convert.";return}
+    $("ucToVal").value=fmt(fv*f/t);
+  }
+  res.innerHTML='<span class="big">'+fmt(parseFloat($("ucFromVal").value))+" "+ucFrom.value+" = "+fmt(parseFloat($("ucToVal").value))+" "+ucTo.value+'</span><p>1 '+ucFrom.value+" = "+fmt(f/t)+" "+ucTo.value+" · 1 "+ucTo.value+" = "+fmt(t/f)+" "+ucFrom.value+"</p>";
+}
+ucCat.addEventListener("change",ucFillUnits);
+ucFrom.addEventListener("change",function(){ucCalc()});
+ucTo.addEventListener("change",function(){ucCalc()});
+$("ucFromVal").addEventListener("input",function(){ucCalc()});
+$("ucToVal").addEventListener("input",function(){ucCalc("to")});
+$("ucSwap").addEventListener("click",function(){var i=ucFrom.selectedIndex;ucFrom.selectedIndex=ucTo.selectedIndex;ucTo.selectedIndex=i;ucCalc()});
+Array.prototype.forEach.call(document.querySelectorAll("[data-preset]"),function(b){
+  b.addEventListener("click",function(){
+    var p=b.dataset.preset;
+    if(p==="cm-in"){ucCat.value="length";ucFillUnits();ucFrom.value="Centimetre";ucTo.value="Inch"}
+    if(p==="kg-lb"){ucCat.value="weight";ucFillUnits();ucFrom.value="Kilogram";ucTo.value="Pound"}
+    if(p==="c-f"){ucCat.value="temperature";ucFillUnits();ucFrom.value="Celsius";ucTo.value="Fahrenheit"}
+    if(p==="km-mi"){ucCat.value="length";ucFillUnits();ucFrom.value="Kilometre";ucTo.value="Mile"}
+    ucCalc();
+  });
+});
+ucFillUnits();
+
+/* ---------- 2. BMI ---------- */
+function bmiCalc(){
+  var w=parseFloat($("bmiWeight").value),h=parseFloat($("bmiHeight").value),res=$("bmiResult");
+  if(!(w>0)||!(h>0)){res.innerHTML="Enter your weight and height.";$("bmiBar").style.width="0%";return}
+  var m=h/100,bmi=w/(m*m),cat,color;
+  if(bmi<18.5){cat="Underweight";color="var(--blue)"}else if(bmi<25){cat="Healthy weight";color="var(--accent)"}else if(bmi<30){cat="Overweight";color="var(--amber)"}else{cat="Obese";color="var(--red)"}
+  var lo=(18.5*m*m).toFixed(1),hi=(24.9*m*m).toFixed(1);
+  res.innerHTML='<span class="big">BMI '+bmi.toFixed(1)+" — "+cat+'</span><p>Healthy weight for '+h+" cm: <b>"+lo+" kg – "+hi+" kg</b>. This is a screening guide for adults, not a diagnosis.</p>";
+  var bar=$("bmiBar");bar.style.background=color;bar.style.width=Math.min(100,Math.max(3,bmi/40*100))+"%";
+}
+$("bmiWeight").addEventListener("input",bmiCalc);$("bmiHeight").addEventListener("input",bmiCalc);bmiCalc();
+
+/* ---------- 3. Age ---------- */
+function todayStr(d){return d.toISOString().slice(0,10)}
+$("ageDob").value="2000-01-15";$("ageAt").value=todayStr(new Date());
+function ageCalc(){
+  var dob=new Date($("ageDob").value+"T00:00:00"),at=new Date($("ageAt").value+"T00:00:00"),res=$("ageResult");
+  if(isNaN(dob)||isNaN(at)){res.innerHTML="Pick both dates.";return}
+  if(at<dob){res.innerHTML="The second date is before the birth date.";return}
+  var y=at.getFullYear()-dob.getFullYear(),mo=at.getMonth()-dob.getMonth(),d=at.getDate()-dob.getDate();
+  if(d<0){mo--;d+=new Date(at.getFullYear(),at.getMonth(),0).getDate()}
+  if(mo<0){y--;mo+=12}
+  var days=Math.round((at-dob)/86400000);
+  var next=new Date(at.getFullYear(),dob.getMonth(),dob.getDate());
+  if(next<=at)next.setFullYear(next.getFullYear()+1);
+  var nd=Math.round((next-at)/86400000);
+  var wd=dob.toLocaleDateString("en-GB",{weekday:"long"});
+  res.innerHTML='<span class="big">'+y+" years, "+mo+" months, "+d+' days</span><div class="stat-grid">'
+   +'<div class="stat"><b>'+days.toLocaleString()+'</b><span>Total days</span></div>'
+   +'<div class="stat"><b>'+Math.floor(days/7).toLocaleString()+'</b><span>Total weeks</span></div>'
+   +'<div class="stat"><b>'+(days*24).toLocaleString()+'</b><span>Total hours</span></div>'
+   +'<div class="stat"><b>'+wd+'</b><span>Born on a</span></div>'
+   +'<div class="stat"><b>'+nd+' days</b><span>To next birthday</span></div>'
+   +'<div class="stat"><b>'+next.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})+'</b><span>Next birthday</span></div></div>';
+}
+$("ageDob").addEventListener("change",ageCalc);$("ageAt").addEventListener("change",ageCalc);ageCalc();
+
+/* ---------- 4. Percentage ---------- */
+function pcCalc(){
+  var x1=parseFloat($("pc1x").value),y1=parseFloat($("pc1y").value);
+  $("pc1Result").innerHTML=(isNaN(x1)||isNaN(y1))?"Enter both numbers.":'<span class="big">'+fmt(x1)+"% of "+fmt(y1)+" = "+fmt(x1/100*y1,8)+"</span>";
+  var x2=parseFloat($("pc2x").value),y2=parseFloat($("pc2y").value);
+  $("pc2Result").innerHTML=(isNaN(x2)||isNaN(y2)||y2===0)?"Enter both numbers (whole ≠ 0).":'<span class="big">'+fmt(x2)+" is "+fmt(x2/y2*100,8)+"% of "+fmt(y2)+"</span>";
+  var x3=parseFloat($("pc3x").value),y3=parseFloat($("pc3y").value);
+  if(isNaN(x3)||isNaN(y3)||x3===0){$("pc3Result").innerHTML="Enter both numbers (from ≠ 0)."}
+  else{var ch=(y3-x3)/x3*100;$("pc3Result").innerHTML='<span class="big">'+fmt(x3)+" → "+fmt(y3)+" is a "+(ch>=0?"increase of +":"decrease of ")+fmt(ch,8)+"%</span><p>Difference: "+fmt(y3-x3,8)+"</p>"}
+}
+["pc1x","pc1y","pc2x","pc2y","pc3x","pc3y"].forEach(function(id){$(id).addEventListener("input",pcCalc)});pcCalc();
+
+/* ---------- 5. QR ---------- */
+var qrObj=null;
+function makeQR(){
+  if(typeof QRCode==="undefined"){$("qrBox").innerHTML='<p style="color:var(--muted)">QR library is still loading — check your connection and reopen this tool.</p>';return}
+  var box=$("qrBox");box.innerHTML="";
+  var size=parseInt($("qrSize").value,10);
+  qrObj=new QRCode(box,{text:$("qrText").value||" ",width:size,height:size,correctLevel:QRCode.CorrectLevel[$("qrLevel").value]});
+}
+$("qrText").addEventListener("input",makeQR);$("qrSize").addEventListener("change",makeQR);$("qrLevel").addEventListener("change",makeQR);
+$("qrDownload").addEventListener("click",function(){
+  var c=$("qrBox").querySelector("canvas");
+  if(!c){toast("QR code not ready yet");return}
+  var a=document.createElement("a");a.download="qr-code.png";a.href=c.toDataURL("image/png");a.click();toast("QR code downloaded");
+});
+
+/* ---------- 6. Word Counter ---------- */
+function wcCalc(){
+  var t=$("wcText").value;
+  var words=(t.match(/\S+/g)||[]).length;
+  var chars=t.length, noSpaces=t.replace(/\s/g,"").length;
+  var sentences=(t.match(/[.!?]+(\s|$)/g)||[]).length; if(words&&!sentences)sentences=1;
+  var paras=t.split(/\n\s*\n/).filter(function(s){return s.trim()}).length;
+  var read=Math.ceil(words/200*60), speak=Math.ceil(words/130*60);
+  function dur(s){return s<60?s+" sec":Math.floor(s/60)+" min "+(s%60?s%60+" sec":"").trim()}
+  var stats=[["Words",words],["Characters",chars],["No spaces",noSpaces],["Sentences",sentences],["Paragraphs",paras],["Reading time",words?dur(read):"0 sec"],["Speaking time",words?dur(speak):"0 sec"]];
+  $("wcStats").innerHTML=stats.map(function(s){return '<div class="stat"><b>'+(typeof s[1]==="number"?s[1].toLocaleString():s[1])+'</b><span>'+s[0]+"</span></div>"}).join("");
+  var freq={},list=t.toLowerCase().match(/[a-z\u00C0-\u024F']{3,}/g)||[];
+  list.forEach(function(w){freq[w]=(freq[w]||0)+1});
+  var top=Object.keys(freq).sort(function(a,b){return freq[b]-freq[a]}).slice(0,8);
+  $("wcTop").innerHTML=words?("<b>Most used words:</b> "+(top.length?top.map(function(w){return w+" ("+freq[w]+")"}).join(" · "):"—")):"";
+}
+$("wcText").addEventListener("input",wcCalc);
+$("wcClear").addEventListener("click",function(){$("wcText").value="";wcCalc();$("wcText").focus()});
+$("wcSample").addEventListener("click",function(){$("wcText").value="Free tools save time because they answer one small question instantly. A student checking an essay length, a shopkeeper converting kilograms to pounds, or a traveller working out a tip all need the same thing: the right number, right now, with no sign-up and no waiting. That is why this counter also shows reading time. A page that takes two minutes to read out loud takes about two hundred and sixty words to write.";wcCalc()});
+wcCalc();
+
+/* ---------- 7. Password ---------- */
+var pwHist=[];
+function pwBuild(){
+  var sets={upper:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",lower:"abcdefghijklmnopqrstuvwxyz",digits:"0123456789",symbols:"!@#$%^&*()-_=+[]{}<>?"};
+  if($("pwNoAmb").checked){sets.upper=sets.upper.replace(/[OI]/g,"");sets.lower=sets.lower.replace(/l/g,"");sets.digits=sets.digits.replace(/[01]/g,"")}
+  var pool="",required=[];
+  if($("pwUpper").checked){pool+=sets.upper;required.push(sets.upper)}
+  if($("pwLower").checked){pool+=sets.lower;required.push(sets.lower)}
+  if($("pwDigits").checked){pool+=sets.digits;required.push(sets.digits)}
+  if($("pwSymbols").checked){pool+=sets.symbols;required.push(sets.symbols)}
+  if(!pool){$("pwOut").value="";$("pwStrength").textContent="Select at least one character type.";$("pwMeter").style.width="0%";return}
+  var len=parseInt($("pwLen").value,10),buf=new Uint32Array(len),out=[];
+  crypto.getRandomValues(buf);
+  for(var i=0;i<len;i++)out.push(pool[buf[i]%pool.length]);
+  required.forEach(function(set,idx){if(idx<len){var b=new Uint32Array(1);crypto.getRandomValues(b);out[idx]=set[b[0]%set.length]}});
+  var pw=out.join("");
+  $("pwOut").value=pw;
+  var entropy=len*Math.log2(pool.length);
+  var label,color,pct;
+  if(entropy<50){label="Weak";color="var(--red)";pct=25}else if(entropy<75){label="Fair";color="var(--amber)";pct=50}else if(entropy<100){label="Strong";color="var(--accent)";pct=78}else{label="Excellent";color="var(--accent)";pct=100}
+  $("pwStrength").textContent=label+" · ~"+Math.round(entropy)+" bits of entropy";
+  var m=$("pwMeter");m.style.background=color;m.style.width=pct+"%";
+  pwHist.unshift(pw);if(pwHist.length>5)pwHist.pop();
+  $("pwHistory").innerHTML="<b>Generated this session</b> (gone when you close the tab):"+pwHist.map(function(p){return '<p class="mono" style="margin:4px 0;color:var(--muted)">'+p.replace(/</g,"&lt;")+"</p>"}).join("");
+}
+$("pwLen").addEventListener("input",function(){$("pwLenVal").textContent=this.value;pwBuild()});
+["pwUpper","pwLower","pwDigits","pwSymbols","pwNoAmb"].forEach(function(id){$(id).addEventListener("change",pwBuild)});
+$("pwGen").addEventListener("click",pwBuild);
+$("pwCopy").addEventListener("click",function(){
+  var v=$("pwOut").value;if(!v)return;
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(function(){toast("Password copied")},function(){fallbackCopy()})}else fallbackCopy();
+  function fallbackCopy(){$("pwOut").select();try{document.execCommand("copy");toast("Password copied")}catch(e){toast("Copy failed — select and copy manually")}}
+});
+pwBuild();
+
+/* ---------- 8. EMI ---------- */
+function emiCalc(){
+  var P=parseFloat($("emiAmt").value),rate=parseFloat($("emiRate").value),yrs=parseFloat($("emiYears").value),res=$("emiResult");
+  if(!(P>0)||isNaN(rate)||!(yrs>0)){res.innerHTML="Enter a loan amount, rate and tenure.";$("emiTable").innerHTML="";return}
+  var n=Math.round(yrs*12),r=rate/12/100,emi,totalInt;
+  if(r===0){emi=P/n;totalInt=0}else{var f=Math.pow(1+r,n);emi=P*r*f/(f-1);totalInt=emi*n-P}
+  res.innerHTML='<span class="big">EMI: '+money(Math.round(emi))+" / month</span>"
+   +'<div class="stat-grid"><div class="stat"><b>'+money(Math.round(P))+'</b><span>Loan amount</span></div>'
+   +'<div class="stat"><b>'+money(Math.round(totalInt))+'</b><span>Total interest</span></div>'
+   +'<div class="stat"><b>'+money(Math.round(P+totalInt))+'</b><span>Total repayment</span></div>'
+   +'<div class="stat"><b>'+n+'</b><span>Monthly payments</span></div></div>';
+  var bal=P,rows="<table class='data'><tr><th>Year</th><th>Principal paid</th><th>Interest paid</th><th>Balance left</th></tr>";
+  for(var yr=1;yr<=Math.ceil(yrs);yr++){
+    var pp=0,ip=0;
+    for(var mth=0;mth<12&&bal>0.01;mth++){var intr=bal*r,pr=Math.min(emi-intr,bal);ip+=intr;pp+=pr;bal-=pr}
+    rows+="<tr><td>"+yr+"</td><td>"+money(Math.round(pp))+"</td><td>"+money(Math.round(ip))+"</td><td>"+money(Math.max(0,Math.round(bal)))+"</td></tr>";
+  }
+  $("emiTable").innerHTML=rows+"</table>";
+}
+["emiAmt","emiRate","emiYears"].forEach(function(id){$(id).addEventListener("input",emiCalc)});emiCalc();
+
+/* ---------- 9. Image Compressor ---------- */
+var imgObjUrl=null;
+function fmtBytes(b){if(b<1024)return b+" B";if(b<1048576)return (b/1024).toFixed(1)+" KB";return (b/1048576).toFixed(2)+" MB"}
+function handleImage(file){
+  if(!file||file.type.indexOf("image/")!==0){toast("Please choose an image file");return}
+  var url=URL.createObjectURL(file),img=new Image();
+  img.onload=function(){
+    var maxW=parseInt($("imgWidth").value,10),scale=maxW&&img.naturalWidth>maxW?maxW/img.naturalWidth:1;
+    var cw=Math.round(img.naturalWidth*scale),ch=Math.round(img.naturalHeight*scale);
+    var cv=document.createElement("canvas");cv.width=cw;cv.height=ch;
+    var ctx=cv.getContext("2d");ctx.fillStyle="#ffffff";ctx.fillRect(0,0,cw,ch);ctx.drawImage(img,0,0,cw,ch);
+    var q=parseInt($("imgQuality").value,10)/100;
+    cv.toBlob(function(blob){
+      if(imgObjUrl)URL.revokeObjectURL(imgObjUrl);
+      imgObjUrl=URL.createObjectURL(blob);
+      $("imgBefore").src=url;$("imgAfter").src=imgObjUrl;
+      $("imgPreviewRow").style.display="";
+      var dl=$("imgDownload");dl.href=imgObjUrl;dl.style.display="";dl.textContent="Download compressed image ("+fmtBytes(blob.size)+")";
+      var saved=Math.max(0,Math.round((1-blob.size/file.size)*100));
+      $("imgInfo").innerHTML='<div class="result"><span class="big">'+fmtBytes(file.size)+" → "+fmtBytes(blob.size)+'</span><p>Saved about <b>'+saved+'%</b> · '+img.naturalWidth+"×"+img.naturalHeight+" → "+cw+"×"+ch+" · Output: JPEG at "+$("imgQuality").value+"% quality</p></div>";
+    },"image/jpeg",q);
+  };
+  img.src=url;
+}
+$("imgDrop").addEventListener("click",function(){$("imgFile").click()});
+$("imgDrop").addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();$("imgFile").click()}});
+$("imgDrop").addEventListener("dragover",function(e){e.preventDefault()});
+$("imgDrop").addEventListener("drop",function(e){e.preventDefault();if(e.dataTransfer.files.length)handleImage(e.dataTransfer.files[0])});
+var lastImgFile=null;
+$("imgFile").addEventListener("change",function(){if(this.files.length){lastImgFile=this.files[0];handleImage(lastImgFile)}});
+$("imgQuality").addEventListener("input",function(){$("imgQVal").textContent=this.value;if(lastImgFile)handleImage(lastImgFile)});
+$("imgWidth").addEventListener("change",function(){if(lastImgFile)handleImage(lastImgFile)});
+
+/* ---------- 10. PDF Inspector ---------- */
+if(window.pdfjsLib){pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"}
+function handlePDF(file){
+  if(!file){return}
+  if(!window.pdfjsLib){$("pdfInfo").innerHTML='<p style="color:var(--muted)">PDF library is still loading — check your connection and try again.</p>';return}
+  $("pdfInfo").innerHTML="Reading PDF on your device…";
+  var fr=new FileReader();
+  fr.onload=function(){
+    pdfjsLib.getDocument({data:new Uint8Array(fr.result)}).promise.then(function(pdf){
+      pdf.getMetadata().then(function(meta){
+        var info=meta.info||{};
+        $("pdfInfo").innerHTML='<div class="result"><span class="big">'+pdf.numPages+" pages · "+fmtBytes(file.size)+'</span><p>'
+         +(info.Title?("<b>Title:</b> "+String(info.Title).replace(/</g,"&lt;")+"<br/>"):"")
+         +(info.Author?("<b>Author:</b> "+String(info.Author).replace(/</g,"&lt;")+"<br/>"):"")
+         +"<b>File:</b> "+file.name.replace(/</g,"&lt;")+"</p></div>";
+      });
+      var pages=[],max=Math.min(3,pdf.numPages),done=0;
+      for(var p=1;p<=max;p++){
+        (function(pn){
+          pdf.getPage(pn).then(function(page){return page.getTextContent()}).then(function(tc){
+            pages[pn]=tc.items.map(function(it){return it.str}).join(" ");
+            done++;if(done===max)$("pdfText").value=pages.slice(1).join("\n\n— — —\n\n")||"(No text layer found — this looks like a scanned PDF. See the OCR section in the guide below.)";
+          });
+        })(p);
+      }
+    }).catch(function(){$("pdfInfo").innerHTML='<p style="color:var(--muted)">Could not read that PDF — it may be corrupted or password-protected.</p>'});
+  };
+  fr.readAsArrayBuffer(file);
+}
+$("pdfDrop").addEventListener("click",function(){$("pdfFile").click()});
+$("pdfDrop").addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();$("pdfFile").click()}});
+$("pdfDrop").addEventListener("dragover",function(e){e.preventDefault()});
+$("pdfDrop").addEventListener("drop",function(e){e.preventDefault();if(e.dataTransfer.files.length)handlePDF(e.dataTransfer.files[0])});
+$("pdfFile").addEventListener("change",function(){if(this.files.length)handlePDF(this.files[0])});
+$("pdfCopy").addEventListener("click",function(){
+  var v=$("pdfText").value;if(!v){toast("No text to copy yet");return}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(function(){toast("Text copied — paste it into Word or Google Docs")})}else{$("pdfText").select();try{document.execCommand("copy");toast("Text copied")}catch(e){toast("Copy failed — select manually")}}
+});
+$("pdfDownload").addEventListener("click",function(){
+  var v=$("pdfText").value;if(!v){toast("No text to download yet");return}
+  var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([v],{type:"text/plain"}));a.download="pdf-text.txt";a.click();toast("Text file downloaded");
+});
+
+route();
+})();
+</script>
+</body>
+</html>

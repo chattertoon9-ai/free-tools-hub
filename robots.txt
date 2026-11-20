@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chattertoon9-ai.github.io/free-tools-hub/sitemap.xml
