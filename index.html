@@ -141,9 +141,53 @@ footer.site p{color:var(--muted);font-size:.92rem;margin:0}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 .hidden-file{display:none}
 .kbd-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+/* ---- Free Tools Hub page loader (approved 2026-11-23) ---- */
+#fthLoader{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 18px 40px;background:linear-gradient(160deg,#062e2a,#0b4f45 60%,#0f766e 100%);color:#e6f7f2;transition:opacity .6s ease}
+#fthLoader.fth-done{opacity:0;pointer-events:none}
+#fthLoader .fth-icon-box{height:74px;display:flex;align-items:center;justify-content:center}
+#fthLoader .fth-brand{font-weight:800;letter-spacing:.02em;font-size:clamp(1.15rem,3.4vw,1.45rem);margin-top:12px}
+#fthLoader .fth-tag{font-size:.85rem;opacity:.82;margin-top:3px}
+#fthLoader .fth-status{font-size:.8rem;opacity:.75;margin-top:14px;min-height:1.25em}
+#fthLoader .fth-bar{width:min(260px,78%);height:7px;border-radius:99px;margin-top:8px;background:rgba(127,127,127,.28);overflow:hidden}
+#fthLoader .fth-bar>i{display:block;height:100%;width:0%;border-radius:99px;background:linear-gradient(90deg,#2dd4bf,#4ade80)}
+#fthLoader .fth-pct{font-weight:800;font-size:1.05rem;margin-top:8px;font-variant-numeric:tabular-nums}
+#fthLoader .fth-credit{position:absolute;left:0;right:0;bottom:0;padding:9px 10px;font-size:.74rem;letter-spacing:.02em;text-align:center;color:#a7d8cd;background:rgba(2,24,20,.35)}
+#fthLoader .fth-credit b{font-weight:800;color:#ffd34d}
+@keyframes fth-spin{to{transform:rotate(360deg)}}
+@keyframes fth-spinRev{to{transform:rotate(-360deg)}}
+#fthLoader .fth-gear{transform-origin:center;transform-box:fill-box;animation:fth-spin 3.2s linear infinite}
+#fthLoader .fth-gear2{transform-origin:center;transform-box:fill-box;animation:fth-spinRev 2.4s linear infinite}
+@media (prefers-reduced-motion:reduce){#fthLoader .fth-gear,#fthLoader .fth-gear2{animation:none!important}}
 </style>
 </head>
 <body>
+<!-- Free Tools Hub page loader (approved 2026-11-23) -->
+<div id="fthLoader" role="status" aria-label="Free Tools Hub load ho raha hai">
+  <div class="fth-icon-box">
+    <svg width="82" height="74" viewBox="0 0 96 80" fill="none" stroke="#5eead4" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <g class="fth-gear">
+        <circle cx="34" cy="40" r="13" fill="rgba(45,212,191,.15)"/>
+        <path d="M34 22 v7 M34 51 v7 M16 40 h7 M45 40 h7 M21 27 l5 5 M42 48 l5 5 M47 27 l-5 5 M26 48 l-5 5"/>
+        <circle cx="34" cy="40" r="5.5"/>
+      </g>
+      <g class="fth-gear2" stroke="#4ade80">
+        <circle cx="70" cy="24" r="8.5" fill="rgba(74,222,128,.14)"/>
+        <path d="M70 11 v5 M70 32 v5 M57 24 h5 M78 24 h5 M61 15 l3.5 3.5 M75.5 29.5 L79 33 M79 15 l-3.5 3.5 M64.5 29.5 L61 33"/>
+        <circle cx="70" cy="24" r="3.4"/>
+      </g>
+      <path d="M62 62 l14 -14 M74 44 l6 6 -4 4 -6 -6" stroke="#fbbf24"/>
+    </svg>
+  </div>
+  <div class="fth-brand">Free Tools Hub</div>
+  <div class="fth-tag">Free tools people actually search for</div>
+  <div class="fth-status" id="fthStatus"></div>
+  <div class="fth-bar"><i id="fthBar"></i></div>
+  <div class="fth-pct" id="fthPct">0%</div>
+  <div class="fth-credit">Developed and Designed by <b>Shizcon</b></div>
+</div>
+<noscript><style>#fthLoader{display:none!important}</style></noscript>
+
 <header class="site">
   <div class="wrap header-in">
     <a class="brand" href="#home"><span class="brand-mark">FT</span> Free Tools Hub</a>
@@ -964,6 +1008,36 @@ $("pdfDownload").addEventListener("click",function(){
 });
 
 route();
+})();
+</script>
+
+<!-- Free Tools Hub page loader script (approved 2026-11-23) -->
+<script>
+(function(){
+  "use strict";
+  var loader=document.getElementById("fthLoader");
+  if(!loader) return;
+  var bar=document.getElementById("fthBar"), pct=document.getElementById("fthPct"), statusEl=document.getElementById("fthStatus");
+  var statuses=["Tools load ho rahe hain…","Calculators taiyaar…"];
+  var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var dur=reduced?60:1700, start=null, raf=null;
+  function finish(){
+    bar.style.width="100%"; pct.textContent="100%"; statusEl.textContent="Taiyaar!";
+    loader.classList.add("fth-done");
+    setTimeout(function(){ if(loader.parentNode) loader.parentNode.removeChild(loader); },650);
+  }
+  function frame(ts){
+    if(!start) start=ts;
+    var t=Math.min(1,(ts-start)/dur);
+    var eased=1-Math.pow(1-t,2.2);
+    var p=Math.round(eased*100);
+    bar.style.width=p+"%";
+    pct.textContent=p+"%";
+    statusEl.textContent=statuses[Math.min(statuses.length-1,Math.floor(t*statuses.length))];
+    if(t<1){ raf=requestAnimationFrame(frame); } else { finish(); }
+  }
+  raf=requestAnimationFrame(frame);
+  setTimeout(function(){ if(document.getElementById("fthLoader")) finish(); },4000);
 })();
 </script>
 </body>
