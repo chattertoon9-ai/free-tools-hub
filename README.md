@@ -5,6 +5,11 @@ Unit Converter, BMI, Age, Percentage, QR Code, Word Counter, Password
 Generator, Loan/EMI, Image Compressor, PDF guide + in-browser PDF
 inspector; plus About, Privacy, Terms, Contact and Site Audit views).
 
+## Related site
+- **Converters:** https://converters.alasadconstructors.com/ — dedicated
+  length, weight, temperature, area, volume and time converter pages,
+  with step-by-step conversion guides.
+
 ## Files
 - `index.html` — the whole site, single self-contained file (82 KB).
   External CDN libraries it loads at runtime: QRCode.js and PDF.js
